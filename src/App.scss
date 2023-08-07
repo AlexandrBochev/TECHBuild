@@ -1,0 +1,121 @@
+/* fonts */
+@font-face {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+    url('./assets/fonts/TTHoves-Bold.woff2') format('woff2'),
+    url('./assets/fonts/TTHoves-Bold.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+    url('./assets/fonts/TTHoves-Medium.woff2') format('woff2'),
+    url('./assets/fonts/TTHoves-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    url('./assets/fonts/TTHoves-Regular.woff2') format('woff2'),
+    url('./assets/fonts/TTHoves-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TT Hoves';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    url('./assets/fonts/TTHoves-Light.woff2') format('woff2'),
+    url('./assets/fonts/TTHoves-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 900;
+  src: local(''),
+    url('./assets/fonts/SFProDisplay-Black.woff2') format('woff2'),
+    url('./assets/fonts/SFProDisplay-Black.woff') format('woff');
+}
+
+// global styles
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'TT Hoves';
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4rem;
+  color: #333333;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  color: #BDBDBD;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+p {
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.56rem;
+  margin: 0;
+}
+
+a {
+  text-decoration:none;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+// Media 
+@media  (min-width: 641px) {
+  .container {
+    max-width: 640px;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+@media  (min-width: 769px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media  (min-width: 1025px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media  (min-width: 1201px) {
+  .container {
+    max-width: 1200px;
+  }
+}
