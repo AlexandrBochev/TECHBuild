@@ -1,6 +1,6 @@
-import photo1 from "../assets/img/9.jpg"
-import photo2 from "../assets/img/10.jpg"
-import photo3 from "../assets/img/11.jpg"
+import photo1 from "../assets/img/9.webp"
+import photo2 from "../assets/img/10.webp"
+import photo3 from "../assets/img/11.webp"
 
 export const about = {
   photos: [

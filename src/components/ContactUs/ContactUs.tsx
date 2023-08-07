@@ -1,5 +1,5 @@
 import styles from './ContactUs.module.scss'
-import ContactCentre from '../../assets/img/contact-us.jpg'
+import ContactCentre from '../../assets/img/contact-us.webp'
 import ContactForm from '../ContactForm/ContactForm'
 
 const ContactUs = () => {

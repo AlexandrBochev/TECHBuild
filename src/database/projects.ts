@@ -1,11 +1,11 @@
-import slide1 from "../assets/img/1.jpg"
-import slide2 from "../assets/img/2.jpg"
+import slide1 from "../assets/img/1.webp"
+import slide2 from "../assets/img/2.webp"
 import slide3 from "../assets/img/3.webp"
-import slide4 from "../assets/img/4.jpg"
-import slide5 from "../assets/img/5.jpg"
-import slide6 from "../assets/img/6.jpg"
-import slide7 from "../assets/img/7.jpg"
-import slide8 from "../assets/img/8.jpg"
+import slide4 from "../assets/img/4.webp"
+import slide5 from "../assets/img/5.webp"
+import slide6 from "../assets/img/6.webp"
+import slide7 from "../assets/img/7.webp"
+import slide8 from "../assets/img/8.webp"
 
 export const projects = [
   {

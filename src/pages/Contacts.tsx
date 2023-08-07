@@ -1,7 +1,8 @@
+import ContactUs from "../components/ContactUs/ContactUs"
 
 const Contacts = () => {
   return (
-    <div>Contacts</div>
+    <ContactUs />
   )
 }
 
