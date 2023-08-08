@@ -2,32 +2,36 @@ import Button from '../Button/Button'
 import styles from './About.module.scss'
 import { about } from '../../database/about'
 import { motion as m } from "framer-motion"
+import { Link } from 'react-router-dom'
 
-const About = () => {
+const About = ({ btn = true }: { btn?: boolean }) => {
   return (
     <div className='container'>
       <section className={styles.about}>
-          <m.div
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              delay: 0.4,
-              ease: [0, 0.71, 0.2, 1.01]
-            }}
-            className={styles.article}>
-            <h2>{about.title}</h2>
-            <p>{about.article}</p>
-            <Button name='read more' light={true} />
-          </m.div>
+          <div className={styles.article}>
+            <m.h2
+              initial={{ opacity: 0, y: -100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.4, ease: "easeOut" }}>
+              {about.title}
+            </m.h2>
+            <m.p
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4, duration: 0.4, ease: "easeOut" }}>
+              {about.article}
+            </m.p>
+            { btn && <m.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.4, ease: "easeOut" }}>
+              <Link to='/about'><Button name='read more' light={true} /></Link>
+            </m.div> }
+          </div>
           <m.div
             initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{
-              duration: 0.4,
-              delay: 0.2,
-              ease: [0, 0.71, 0.2, 1.01]
-            }}
+            whileInView={{ scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.4, ease: "easeOut" }}
             className={styles.gallery}>
             {about.photos.map((photo, id) => <img key={id} src={photo.name} alt='building' />)}
           </m.div>

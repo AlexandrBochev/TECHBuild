@@ -17,17 +17,17 @@ const Intro = () => {
       <div className={styles.intro_left}>
         <m.div
           initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{
-            duration: 0.8,
-            delay: 0.4,
-            ease: [0, 0.71, 0.2, 1.01]
-          }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.2, duration: 0.4, ease: "easeOut" }}
           className={styles.intro_title}>
           <h2>innovate</h2>
           <h1>tech</h1>
         </m.div>
-        <div className={styles.counter}>
+        <m.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.4, ease: "easeOut" }}
+          className={styles.counter}>
           <div className={styles.switcher}>
             <Switcher newSlide={newSlide} />
             <span />
@@ -35,16 +35,12 @@ const Intro = () => {
           <div>
             <Counter currentIndex={slide} total={projects.length} />
           </div>
-        </div>
+        </m.div>
       </div>
       <m.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{
-          duration: 0.8,
-          delay: 0.2,
-          ease: [0, 0.71, 0.2, 1.01]
-        }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0, duration: 2, ease: "easeOut" }}
         className={styles.intro_slider}>
         <Slider projects={projects} index={slide} />
         <div className={styles.btn}>

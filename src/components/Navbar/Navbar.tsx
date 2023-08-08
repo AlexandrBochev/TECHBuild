@@ -8,6 +8,16 @@ import Burger from './Burger';
 const Navbar = () => {
   const [isBurgerClicked, setIsBurgerClicked] = useState(false)
   const [menuOpen, setMenuOpen] = useState('')
+  const [isScrolled, setIsScrolled] = useState('')
+
+
+  window.onscroll = () => {
+    if (window.pageYOffset > 150) {
+      setIsScrolled(styles.scrolled)
+    } else {
+      setIsScrolled('')
+    }
+  }
 
   const handleBurger = () => {
     setIsBurgerClicked(prev => !prev)
@@ -21,7 +31,7 @@ const Navbar = () => {
 
   return (
     <header className={styles.header}>
-      <nav className={`${styles.navbar} ${menuOpen}`}>
+      <nav className={`${styles.navbar} ${isScrolled} ${menuOpen}`}>
         <div className={`container ${styles.wrapper}`}>
           <div className={styles.logo}><Link to="/"><Logo /></Link></div>
           <ul>

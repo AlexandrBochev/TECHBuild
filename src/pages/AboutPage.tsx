@@ -1,11 +1,10 @@
-import GaleryImg from "../components/GaleryImg/GaleryImg"
 import  About  from '../components/About/About'
 
 const AboutPage = () => {
 
   return (
     <div>
-      <About />
+      <About btn={false} />
     </div>
   )
 }
