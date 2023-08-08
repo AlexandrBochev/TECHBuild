@@ -16,8 +16,8 @@ const About = ({ btn = true }: { btn?: boolean }) => {
               {about.title}
             </m.h2>
             <m.p
-              initial={{ opacity: 0, x: 100 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.4, ease: "easeOut" }}>
               {about.article}
             </m.p>

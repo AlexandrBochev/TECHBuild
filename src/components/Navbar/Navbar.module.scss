@@ -28,7 +28,6 @@
 }
 
 .logo {
-  height: 100%;
   color: #333333;
 }
 
@@ -99,6 +98,7 @@ li:active span {
   }
 
   ul {
+    display: block;
     flex: 2;
     margin: 0;
     opacity: 1;

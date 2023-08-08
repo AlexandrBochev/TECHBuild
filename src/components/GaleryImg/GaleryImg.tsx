@@ -34,7 +34,7 @@ const GaleryImg = ({ projects }: { projects: IProjects[] }) => {
             <img src={projects[0].slide} alt="slide1" />
           </m.div>
           <m.div
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: -200 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.2, ease: "easeOut" }}
             className={styles.row1}>
